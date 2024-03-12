@@ -50,3 +50,62 @@ body{
     box-shadow: 0 0 20px white;
     background-color: #a1a1a1;
 }
+
+.rules-container{
+    right: 30px;
+    bottom: 70px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18rem;
+    height: 20rem;
+    background-color: #344007;
+    columns: white;
+    border: 8px solid #a1a1a1;
+    border-radius: 13px;
+    z-index: 30;
+}
+
+.rule-title{
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.rules{
+    padding: 0 30px;
+    font-size: 0.9rem;
+}
+
+.close_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid white;
+    background-color: red;
+    padding: 0.9rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    position: absolute;
+    right: -2rem;
+    top: -2.5rem;
+    cursor: pointer;
+}
+
+.btns{
+    float: right;
+    margin: auto;
+    bottom: 10%;
+}
+
+.rule-btn{
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid chocolate;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: 900;
+}
