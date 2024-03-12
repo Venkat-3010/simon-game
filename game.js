@@ -8,6 +8,7 @@ var level = 0;
 
 var ruleButton = $(".rule-btn");
 var closeButton = $(".close_btn");
+var rulesContainer = $(".rules-container");
 
 
 
@@ -19,6 +20,17 @@ $(document).keypress(function(){
     }
 });
 
+ruleButton.on("click", showRules);
+closeButton.on("click", closeRules);
+
+function showRules(){
+    rulesContainer.css("display", "flex");
+}
+
+function closeRules(){
+    rulesContainer.css("display", "none");
+}
+
 $(".btn").click(function() {
     var userChosenColour = $(this).attr("id");
     userClickedPattern.push(userChosenColour);
@@ -29,17 +41,7 @@ $(".btn").click(function() {
     checkAnswer(userClickedPattern.length-1);
 });
 
-ruleButton.addEventListener("click", showRules);
-closeButton.addEventListener("click", closeRules);
-
-function showRules(){
-    rulesContainer.style.display = "flex";
-}
-
-function closeRules(){
-    rulesContainer.style.display = "none";
-}
-
+$("#") 
 function checkAnswer(currentLevel){
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
         if(userClickedPattern.length === gamePattern.length){
@@ -63,7 +65,7 @@ function checkAnswer(currentLevel){
 function nextSequence(){
     userClickedPattern = [];
     level++;
-    $(#"level-title").text("Level" + level);
+    $("#level-title").text("Level " + level);
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
